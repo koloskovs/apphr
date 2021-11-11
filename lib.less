@@ -1,0 +1,208 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans'),
+        url(fonts/OpenSans.ttf);
+
+}
+
+@font-face {
+    font-family: 'Open Sans Italic';
+    src: local('Open Sans Italic'),
+        url(fonts/OpenSans-Italic.ttf);
+
+}
+
+@font-face {
+    font-family: 'Russo One';
+    src: local('Russo One'),
+        url(fonts/RussoOne-Regular.ttf);
+
+}
+
+// Переменные
+
+//Ширина контента
+@mainWidth: 986px;
+
+//Цвет фона
+@mainBgColor: #F2761C;
+@scndBgColor: #2E3B4B;
+@thrdBgColor: rgba(46, 59, 75, 0.5);
+@fourBgColor: #FFFFFF;
+
+//Рамки
+@bigBorder: 11px solid #FFFFFF;
+@mainBorder: 1px solid #2E3B4B;
+@scndBorder: 6px solid #FFFFFF;
+@thrdBorder: 1px solid #FFFFFF;
+@borderRadius: 5px;
+@boxShadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+//Шрифты
+@mainFont: 'Russo One';
+@scndFont: 'Open Sans';
+@textTransform: uppercase;
+//Размеры шрифтов
+@H1FontSize: 40px;
+@H1LineHeight: 140%;
+@frstFontSize: 12px;
+@frstLineHeight: 14px;
+@scndFontSize: 14px;
+@scndLineHeight: 17px;
+@thrdLineHeight: 22px;
+//Цвет текста
+@mainColor: #FFFFFF;
+@scndColor: #000000;
+@thrdColor: rgba(255, 255, 255, 0.5);
+@fourColor: rgba(0, 0, 0, 0.5);
+@fiveColor: #2E3B4B;
+
+
+// Примешивания
+
+// Выравнивание блоков
+.acmargin() {
+    margin: 0 auto;
+}
+
+.flex() {
+    display: flex;
+}
+
+.inlineflex() {
+    display: inline-flex;
+}
+
+.inlineblock {
+    display: inline-block;
+}
+
+.block {
+    display: block;
+}
+
+//Позиционирование
+.pabsolute() {
+    position: absolute;
+}
+
+.prelative() {
+    position: relative;
+}
+
+// Размеры блоков
+.mainwidth() {
+    width: @mainWidth;
+}
+
+.whSize(@w, @h) {
+    width: @w;
+    height: @h;
+}
+
+//Цвета
+.mainbgcolor() {
+    background-color: @mainBgColor;
+}
+
+//Дизайн текстов
+.h1FontStyle() {
+    font-size: @H1FontSize;
+    line-height: @H1LineHeight;
+    text-align: center;
+}
+
+.fstFontStyle() {
+    font-family: @mainFont;
+    font-size: @frstFontSize;
+    line-height: @frstLineHeight;
+    color: @mainColor;
+    text-transform: @textTransform;
+}
+
+.scdFontStyle() {
+    font-family: @scndFont;
+    font-size: @scndFontSize;
+    line-height: @scndLineHeight;
+    color: @scndColor;
+    text-transform: @textTransform;
+    opacity: 0.5;
+}
+
+.thrFontStyle() {
+    font-family: @scndFont;
+    font-size: @scndFontSize;
+    line-height: @scndLineHeight;
+    color: @fourColor;
+    text-transform: @textTransform;
+}
+
+.fourFontStyle() {
+    font-family: @scndFont;
+    font-size: @scndFontSize;
+    line-height: @scndLineHeight;
+    color: @scndColor;
+    text-transform: none;
+}
+
+//Кнопки
+.mainButton() {
+    height: 40px;
+    cursor: pointer;
+    background-color: @scndBgColor;
+    box-shadow: @boxShadow;
+    border: @mainBorder;
+    border-radius: @borderRadius;
+}
+
+.disButton() {
+    color: @thrdColor;
+    background: @thrdBgColor;
+    padding: 0 30px;
+    box-shadow: none;
+    border: none;
+}
+
+//Поля формы
+.mainInput() {
+    .whSize(100%, 50px);
+    margin: 10px 0;
+    padding-left: 36px;
+    border: none;
+    box-shadow: none;
+    border-radius: @borderRadius;
+    text-transform: @textTransform;
+    color: @mainColor;
+    background: @fourBgColor;
+}
+
+.submitInput() {
+    background: @scndBgColor;
+    box-shadow: @boxShadow;
+    font-family: @mainFont;
+    cursor: pointer;
+}
+
+//Фоновые изображения
+.bgrdImage(@img, @position) {
+    background-image: url(@img);
+    background-repeat: no-repeat;
+    background-position: @position;
+}
+
+//Чекбокс
+.hideCheckbox() {
+    .pabsolute;
+    .block;
+    .whSize(0, 0);
+    z-index: -1;
+    opacity: 0;
+}
+
+.filterBr(@br) {
+    filter: brightness(@br);
+}
+
+.filterGr(@gr) {
+    filter: grayscale(@gr);
+}
