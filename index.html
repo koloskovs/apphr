@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>3. регистрация подтверждение номера для работника</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+    <header id="header">
+        <div class="logo">
+            <img src="img/logo.svg">
+        </div>
+        <div class="header-nav">
+            <nav id="main-menu">
+                <ul>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+            <button class="disable button-reg" id="button-reg">Вход/Регистрация</button>
+        </div>
+    </header>
+    <main id="main">
+        <div class="border border-top-left"></div>
+        <div class="border border-top-right"></div>
+        <div class="content" id="content">
+            <div class="registration">
+                <h1 class="acmargin">Регистрация</h1>
+                <form id="form-registration">
+                    <input type="tel" name="your-tel" class="tel" id="tel" placeholder="Номер телефона">
+                    <label for="checkbox" class="checkbox-other">
+                        <input type="checkbox" class="checkbox" name="checkbox" id="checkbox">
+                        <span>Я ознакомился с <a href="#">публичной офертой</a> и принимаю ее условия</span>
+                    </label>
+                    <select name="about-us" id="select-about">
+                        <option value="base">Откуда вы о нас узнали</option>
+                        <option value="internet">Нашел в интернете</option>
+                        <option value="friends">Посоветовали знакомые</option>
+                        <option value="social">Увидел в соц. сетях</option>
+                        <option value="advert">Через рекламу</option>
+                    </select>
+                    <input type="submit" id="submit" class="submit" value="Продолжить">
+                </form>
+            </div>
+            <div class="navigation" id="navigation">
+                <div class="arrow-left" id="arrow-left"></div>
+                <button class="button-back" id="button-back">Назад</button>
+                <div class="points">
+                    <div class="point point-full"></div>
+                    <div class="point"></div>
+                </div>
+                <button class="button-next" id="button-next"><a href="apphr-reg-step2.html">Продолжить</a></button>
+                <div class="arrow-right" id="arrow-right"></div>
+            </div>
+            <div class="avtorisation" id="avtorisation">
+                <div class="question">У вас уже есть аккаунт?</div>
+                <button class="button-avt" id="button-avt">Авторизоваться</button>
+            </div>
+        </div>
+        <div class="border border-bottom"></div>
+    </main>
+    <footer>
+    </footer>
+</body>
+
+</html>
