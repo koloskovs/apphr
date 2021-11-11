@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans'), url(fonts/OpenSans.ttf);
+}
+@font-face {
+  font-family: 'Open Sans Italic';
+  src: local('Open Sans Italic'), url(fonts/OpenSans-Italic.ttf);
+}
+@font-face {
+  font-family: 'Russo One';
+  src: local('Russo One'), url(fonts/RussoOne-Regular.ttf);
+}
+.inlineblock {
+  display: inline-block;
+}
+.block {
+  display: block;
+}
