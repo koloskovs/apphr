@@ -1,0 +1,484 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans'), url(fonts/OpenSans.ttf);
+}
+@font-face {
+  font-family: 'Open Sans Italic';
+  src: local('Open Sans Italic'), url(fonts/OpenSans-Italic.ttf);
+}
+@font-face {
+  font-family: 'Russo One';
+  src: local('Russo One'), url(fonts/RussoOne-Regular.ttf);
+}
+.inlineblock {
+  display: inline-block;
+}
+.block {
+  display: block;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  background-color: #f2761c;
+  width: 986px;
+  margin: 0 auto;
+  font-family: 'Russo One';
+  font-size: 12px;
+  line-height: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+/* Шапка */
+header {
+  display: flex;
+  font-family: 'Russo One';
+  font-size: 12px;
+  line-height: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+  height: 100px;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.logo {
+  margin-left: 10px;
+}
+.logo img {
+  width: 129px;
+  height: 60px;
+}
+/* Меню и кнопка */
+.header-nav {
+  display: inline-flex;
+  margin-right: 10px;
+}
+.header-nav ul {
+  margin: 0 50px;
+}
+.header-nav ul li {
+  display: inline-block;
+  padding: 12px 20px 10px 20px;
+  font-family: 'Open Sans';
+}
+.header-nav ul li a {
+  color: #000000;
+  text-decoration: none;
+}
+button {
+  font-family: 'Russo One';
+  font-size: 12px;
+  line-height: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+  height: 40px;
+  cursor: pointer;
+  background-color: #2e3b4b;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: 1px solid #2e3b4b;
+  border-radius: 5px;
+}
+button.disable {
+  color: rgba(255, 255, 255, 0.5);
+  background: rgba(46, 59, 75, 0.5);
+  padding: 0 30px;
+  box-shadow: none;
+  border: none;
+}
+main {
+  position: relative;
+}
+.content {
+  margin-top: 55px;
+  font-family: 'Russo One';
+  font-size: 12px;
+  line-height: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+/* Рамка */
+.border {
+  position: absolute;
+  border: 11px solid #ffffff;
+  z-index: -1;
+}
+.border-bottom {
+  width: 986px;
+  height: 202px;
+  border-top-width: 0;
+  bottom: -33px;
+}
+.border-top-left {
+  width: 564px;
+  height: 280px;
+  border-bottom-width: 0;
+  border-right-width: 0;
+}
+.border-top-right {
+  width: 440px;
+  height: 180px;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  right: 0;
+}
+a {
+  color: #ffffff;
+}
+/* Контент */
+.registration {
+  padding-top: 60px;
+  width: 366px;
+  height: 385px;
+  margin: 0 auto;
+  font-family: 'Russo One';
+  font-size: 12px;
+  line-height: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+  /* Блок с формой */
+}
+.registration h1 {
+  font-size: 40px;
+  line-height: 140%;
+  text-align: center;
+}
+.registration form {
+  margin-top: 35px;
+  /* Отрисовка чекбокса */
+  /* Checked */
+  /* Hover */
+  /* Active */
+  /* Disabled */
+}
+.registration form input.tel,
+.registration form input.submit,
+.registration form input.pass,
+.registration form select {
+  display: block;
+  width: 100%;
+  height: 50px;
+  margin: 10px 0;
+  padding-left: 36px;
+  border: none;
+  box-shadow: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #ffffff;
+}
+.registration form input.pass::placeholder,
+.registration form input.tel::placeholder {
+  font-family: 'Open Sans';
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+.registration form input.pass {
+  background-image: url('img/view 1.svg');
+  background-repeat: no-repeat;
+  background-position: 329px;
+}
+.registration form select {
+  background-image: url('img/select-arrow.png');
+  background-repeat: no-repeat;
+  background-position: 310px;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  appearance: none;
+}
+.registration form input.submit {
+  background: #2e3b4b;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: 'Russo One';
+  cursor: pointer;
+  margin-top: 20px;
+  padding-left: 0;
+}
+.registration form label input[type=checkbox] {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  z-index: -1;
+  opacity: 0;
+}
+.registration form .checkbox-other {
+  display: block;
+  position: relative;
+  margin: 0 0 10px 0;
+  line-height: 19px;
+  cursor: pointer;
+  user-select: none;
+}
+.registration form .checkbox-other input[type=checkbox] {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  z-index: -1;
+  opacity: 0;
+}
+.registration form .checkbox-other span {
+  display: inline-block;
+  position: relative;
+  padding: 0 0 0 35px;
+  line-height: 19px;
+}
+.registration form .checkbox-other span:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  top: 0;
+  left: 0;
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+.registration form .checkbox-other input[type=checkbox] + span:after {
+  content: "";
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.registration form .checkbox-other input[type=checkbox]:checked + span:after {
+  content: "✓";
+  color: #2e3b4b;
+  font-size: 30px;
+  font-weight: 900;
+  position: absolute;
+  left: 2px;
+  top: -2px;
+  opacity: 1;
+}
+.registration form .checkbox-other span:hover:after {
+  filter: brightness(110%);
+}
+.registration form .checkbox-other span:active:before,
+.registration form .checkbox-other span:active:after {
+  filter: brightness(80%);
+}
+.registration form .checkbox-other input[type=checkbox]:disabled + span {
+  color: #666;
+  cursor: default;
+}
+.registration form .checkbox-other input[type=checkbox]:disabled + span:before,
+.registration form .checkbox-other input[type=checkbox]:disabled + span:after {
+  filter: grayscale(100%);
+  opacity: 0.6;
+}
+.registration form span {
+  font-family: 'Open Sans';
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  text-transform: none;
+}
+/* Кнопки навигации */
+.navigation {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  /* Стрелки */
+  /* Точки */
+}
+.navigation button.button-back,
+.navigation button.button-next {
+  width: 175px;
+  height: 50px;
+}
+.navigation button.button-back a,
+.navigation button.button-next a {
+  text-decoration: none;
+}
+.navigation button.button-back {
+  background: #f2761c;
+}
+.navigation .arrow-left,
+.navigation .arrow-right {
+  width: 33px;
+  height: 58px;
+  margin-top: -4px;
+}
+.navigation .arrow-left {
+  background-image: url('img/arrow-left.png');
+  background-repeat: no-repeat;
+  background-position: 0;
+  margin-right: 22px;
+}
+.navigation .arrow-right {
+  background-image: url('img/arrow-right.png');
+  background-repeat: no-repeat;
+  background-position: 0;
+  margin-left: 22px;
+}
+.navigation .points {
+  display: flex;
+  margin: 0 162px;
+}
+.navigation .points .point {
+  width: 22px;
+  height: 22px;
+  border: 6px solid #ffffff;
+  border-radius: 12px;
+  background-color: #f2761c;
+  align-self: center;
+  margin: 0 8px;
+}
+.navigation .points .point-full {
+  background-color: #2e3b4b;
+}
+/* Блок авторизации */
+.avtorisation {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+  margin-bottom: 33px;
+  align-items: center;
+}
+.avtorisation .question {
+  width: 140px;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: right;
+  padding-right: 16px;
+}
+.avtorisation .button-avt {
+  background: #f2761c;
+  width: 193px;
+}
+/* Подвал */
+footer {
+  height: 110px;
+}
